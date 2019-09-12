@@ -38,7 +38,7 @@ public class move : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            moveVec = transform.position + transform.TransformDirection(Vector3.back) * MoveSpeed * Time.deltaTime;
+            
 
 
         }
@@ -54,6 +54,13 @@ public class move : MonoBehaviour
         else rotateVec.y = 0;
 
         transform.Rotate(rotateVec*Time.deltaTime);
+
+
+
+        if(Vector3.forward.normalized != rb.velocity.normalized)
+        {
+        
+        }
        
 
 
